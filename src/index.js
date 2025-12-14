@@ -1,9 +1,12 @@
+//Module Imports
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+//Custom Imports 
+import App from './app/App';
+
+//--ROOT RENDER--
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>

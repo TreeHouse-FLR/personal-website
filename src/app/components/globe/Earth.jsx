@@ -28,10 +28,12 @@ export default function Model(props) {
     return () => actions[names[0]].fadeOut(0.5)
   }, [actions, names])
 
-  useFrame(() => {
-    group.current.rotation.y = 0;
-    group.current.rotation.x = -Math.PI / 2;
-    group.current.rotation.z += 0.01;
+  useFrame((_, delta) => {
+    group.current.mixer?.update(delta);
+
+    group.current.rotation.y -= .001;
+    group.current.rotation.x = 0;
+    group.current.rotation.z = 0;
   });
 
   return (

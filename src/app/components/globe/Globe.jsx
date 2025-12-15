@@ -1,6 +1,6 @@
 //Module Imports
-import { Canvas, useFrame } from "@react-three/fiber";
-import { Bloom, EffectComposer, SSAO } from "@react-three/postprocessing";
+import { Canvas } from "@react-three/fiber";
+import { EffectComposer, SSAO } from "@react-three/postprocessing";
 
 //Custom Imports
 import Earth from "./Earth"
@@ -18,7 +18,6 @@ const Globe = () => {
       <directionalLight position={[0, 1, 2]} color="white" />
       <Suspense fallback={null}>
         <EffectComposer smaa>
-            <Bloom />
             <SSAO />
         </EffectComposer>
       </Suspense>

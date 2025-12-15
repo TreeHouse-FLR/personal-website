@@ -20,7 +20,7 @@ function App() {
       //MIL Time
       setTime(currTime);      
       let currHour = currTime.getHours(); 
-      const wrapper = document.getElementById("appWrapper")
+      const wrapper = document.getElementById("body")
   
       //set background animattion based on hour
       if ((18 <= currHour || currHour <= 6) && background !== "dark") {
@@ -39,7 +39,7 @@ function App() {
   
 
   return (
-    <div id="appWrapper" className="App">
+    <div className="App">
       <Clock time={time.toLocaleTimeString()}/>
       <Globe />
     </div>

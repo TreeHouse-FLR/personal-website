@@ -1,12 +1,15 @@
 body {
   margin: 0;
-  padding: 0;
+  padding: 1rem;
+  background-color: white;
+  overflow: hidden;
 }
 
 canvas {
   height: 100vh !important;
   position: relative;
   z-index: 1;
+  overflow: hidden;
 }
 
 .monoton-regular {
@@ -15,9 +18,17 @@ canvas {
   font-style: normal;
 }
 
+.doto {
+  font-family: "Doto", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings:
+    "ROND" 0;
+}
+
 .App {
   text-align: center;
-  background-color: white;
   height: 100%;
   width: 100%;
 }
@@ -46,10 +57,10 @@ to { background-color: white; color: black;}
 
 .clock {
   z-index: 2;
-  width: 100%;
   position: absolute;
   display: flex;
   flex-direction: row;
   justify-content: end;
   font-size: xx-large;
+  width: calc(100vw - 2rem);
 }

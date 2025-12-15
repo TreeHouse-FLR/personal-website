@@ -1,17 +1,25 @@
 body {
-    margin: 0;
-    padding: 0;
-
+  margin: 0;
+  padding: 0;
 }
 
 canvas {
   height: 100vh !important;
+  position: relative;
+  z-index: 1;
+}
+
+.monoton-regular {
+  font-family: "Monoton", sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
 .App {
   text-align: center;
   background-color: white;
-  height: 100vh;
+  height: 100%;
+  width: 100%;
 }
 
 .App__lightToDark-animate {
@@ -34,4 +42,14 @@ to { background-color: black; color: white;}
 @keyframes darkToLight {
 from {background-color: black; color: white;}
 to { background-color: white; color: black;}
+}
+
+.clock {
+  z-index: 2;
+  width: 100%;
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+  font-size: xx-large;
 }

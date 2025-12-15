@@ -1,6 +1,5 @@
 //Module Imports
 import { Canvas } from "@react-three/fiber";
-import { EffectComposer, SSAO } from "@react-three/postprocessing";
 
 //Custom Imports
 import Earth from "./Earth"
@@ -16,11 +15,6 @@ const Globe = () => {
         <Earth/>
       </Suspense>
       <directionalLight position={[0, 1, 2]} color="white" />
-      <Suspense fallback={null}>
-        <EffectComposer smaa>
-            <SSAO />
-        </EffectComposer>
-      </Suspense>
     </Canvas>
   )
 };
